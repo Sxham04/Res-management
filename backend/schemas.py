@@ -24,3 +24,6 @@ class ResultOut(BaseModel):
 
     class Config:
         from_attributes = True
+
+class ResultUpdate(BaseModel):
+    marks: float

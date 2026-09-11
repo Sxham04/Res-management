@@ -138,11 +138,9 @@ function AdminDashboard() {
     }
   };
 
-  const handleUpdateMarks = async () => {
+const handleUpdateMarks = async () => {
     try {
       await api.put('/results/' + editResultId, {
-        student_id: parseInt(selectedStudent),
-        subject_id: parseInt(selectedSubject),
         marks: parseFloat(editMarks)
       });
       showMessage('marks updated');

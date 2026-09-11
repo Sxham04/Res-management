@@ -110,7 +110,7 @@ def add_result(result: schemas.ResultCreate, db: Session = Depends(get_db), curr
 
 # update a result (admin only)
 @app.put("/results/{result_id}")
-def update_result(result_id: int, result: schemas.ResultCreate, db: Session = Depends(get_db), current_user=Depends(auth.require_admin)):
+def update_result(result_id: int, result: schemas.ResultUpdate, db: Session = Depends(get_db), current_user=Depends(auth.require_admin)):
     db_result = db.query(models.Result).filter(models.Result.id == result_id).first()
     if not db_result:
         raise HTTPException(status_code=404, detail="result not found")
