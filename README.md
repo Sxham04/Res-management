@@ -29,6 +29,18 @@ student-result-management/
         ├── AdminDashboard.js
         └── StudentDashboard.js
 ```
+## Screenshots
+
+### Login
+![Login](screenshots/login-page.png)
+
+### Admin Dashboard 
+![Admin](screenshots/admin-dash1.png)  
+
+![Admin](screenshots/admin-dash2.png)
+
+### Student Dashboard
+![Student](screenshots/stud-dash.png)  
 
 ## Setup and Run
 
