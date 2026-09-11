@@ -1,8 +1,13 @@
+import sys
+import os
+sys.path.insert(0, os.path.dirname(__file__))
 from fastapi import FastAPI, Depends, HTTPException
 from fastapi.middleware.cors import CORSMiddleware
 from sqlalchemy.orm import Session
 from database import engine, get_db, Base
-import models, schemas, auth
+import models
+import schemas
+import auth
 
 Base.metadata.create_all(bind=engine)
 
