@@ -135,3 +135,9 @@ def get_my_results(db: Session = Depends(get_db), current_user=Depends(auth.get_
     total = sum(r.marks for r in results)
     average = total / len(results) if results else 0
     return {"results": results, "average": round(average, 2)}
+
+# get all results (admin only)
+@app.get("/results")
+def get_results(db: Session = Depends(get_db), current_user=Depends(auth.require_admin)):
+    results = db.query(models.Result).all()
+    return results
