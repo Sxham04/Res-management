@@ -1,0 +1,28 @@
+.login-container {
+  margin: 50px auto;
+  width: 300px;
+}
+
+.login-error {
+  color: red;
+}
+
+.form-group {
+  margin-bottom: 15px;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 5px;
+}
+
+.form-group input {
+  width: 100%;
+  padding: 6px;
+  box-sizing: border-box;
+}
+
+.login-button {
+  width: 100%;
+  padding: 8px;
+}
